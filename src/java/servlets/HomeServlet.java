@@ -23,7 +23,7 @@ public class HomeServlet extends HttpServlet {
             throws ServletException, IOException {
         String username = (String)request.getSession().getAttribute("username");
        if (username == null || username.equals("")){
-           response.sendRedirect("/Week5Lab_MyLogin/login");
+           response.sendRedirect("login");
        }
        else {
            getServletContext().getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);

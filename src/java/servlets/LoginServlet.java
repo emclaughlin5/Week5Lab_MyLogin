@@ -35,7 +35,7 @@ public class LoginServlet extends HttpServlet {
             if (s.getAttribute("username") == null) {
                 getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
             } else {
-                response.sendRedirect("/Week5Lab_MyLogin/home");
+                response.sendRedirect("home");
             }
         }
     }
@@ -55,7 +55,7 @@ public class LoginServlet extends HttpServlet {
             getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
         } else {
             s.setAttribute("username", username);
-            response.sendRedirect("/Week5Lab_MyLogin/home");
+            response.sendRedirect("home");
         }
     }
 }
